@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Welcome to Burrows&#39; personal notepad.</title>
+    <description>A well-trained and experienced Objective-c/Swift developer.
+</description>
+    <link>http://burrowswang.github.io/</link>
+    <atom:link href="http://burrowswang.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 15 Dec 2015 23:24:12 +0800</pubDate>
+    <lastBuildDate>Tue, 15 Dec 2015 23:24:12 +0800</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>How to enable trim on Mac OSX?</title>
+        <description>&lt;p&gt;Since OSX 10.10.4, Apple has provided a specified command &lt;strong&gt;trimforce&lt;/strong&gt; to turn on trim of your SSD:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo trimforce &lt;span class=&quot;nb&quot;&gt;enable&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So we do not need to use any third party App or some hacky ways to enable trim anymore.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 14 Dec 2015 22:28:19 +0800</pubDate>
+        <link>http://burrowswang.github.io/macos/2015/12/14/how-to-enable-trim-on-mac-osx.html</link>
+        <guid isPermaLink="true">http://burrowswang.github.io/macos/2015/12/14/how-to-enable-trim-on-mac-osx.html</guid>
+        
+        
+        <category>MacOS</category>
+        
+      </item>
+    
+      <item>
+        <title>Mac电脑上如何开启trim？</title>
+        <description>&lt;p&gt;自从Mac OSX 10.10.4开始，苹果官方提供了一个专门用来打开trim功能的命令 &lt;strong&gt;trimforce&lt;/strong&gt;，所以，以后再也不用其他软件或者其他有风险的命令来在Mac中开启trim了&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo trimforce &lt;span class=&quot;nb&quot;&gt;enable&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;希望能够帮到有需要的朋友。&lt;/p&gt;
+</description>
+        <pubDate>Sat, 12 Dec 2015 20:42:11 +0800</pubDate>
+        <link>http://burrowswang.github.io/macos/2015/12/12/Mac%E7%94%B5%E8%84%91%E4%B8%8A%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AFtrim.html</link>
+        <guid isPermaLink="true">http://burrowswang.github.io/macos/2015/12/12/Mac%E7%94%B5%E8%84%91%E4%B8%8A%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AFtrim.html</guid>
+        
+        
+        <category>MacOS</category>
+        
+      </item>
+    
+      <item>
+        <title>How to disable the startup sound of your Mac?</title>
+        <description>&lt;p&gt;There were thounds of answers of this question offering the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# doesn&#39;t work for me&lt;/span&gt;
+sudo nvram &lt;span class=&quot;nv&quot;&gt;SystemAudioVolume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;%80
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Unfortunately, the command doesn’t work for me at all. However, when i changed the parameter %80 to &lt;strong&gt;%01&lt;/strong&gt;, it worked perfectly fine.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# works perfectly fine&lt;/span&gt;
+sudo nvram &lt;span class=&quot;nv&quot;&gt;SystemAudioVolume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;%01
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 12 Dec 2015 20:09:25 +0800</pubDate>
+        <link>http://burrowswang.github.io/macos/2015/12/12/how-to-disable-the-startup-sound-of-your-mac.html</link>
+        <guid isPermaLink="true">http://burrowswang.github.io/macos/2015/12/12/how-to-disable-the-startup-sound-of-your-mac.html</guid>
+        
+        
+        <category>MacOS</category>
+        
+      </item>
+    
+      <item>
+        <title>Understanding the strange grammar of parameters in Swift?</title>
+        <description>&lt;h1 id=&quot;why-no-external-name-for-the-first-parameter&quot;&gt;Why no external name for the first parameter?&lt;/h1&gt;
+
+&lt;p&gt;As described in &lt;a href=&quot;https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Methods.html#//apple_ref/doc/uid/TP40014097-CH15-ID236&quot;&gt;Apple’s document&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Swift gives the first parameter name in a method a local parameter name by default, and gives the second and subsequent parameter names both local and external parameter names by default. This convention matches the typical naming and calling convention you will be familiar with from writing Objective-C methods, and makes for expressive method calls without the need to qualify your parameter names.&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;it’s all about &lt;em&gt;convention&lt;/em&gt;, we define and call methods in Objective-c as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// declaration
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;registerClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cellClass&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;forCellReuseIdentifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// calling
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tableView&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;registerClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cellClass&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;forCellReuseIdentifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So in Swift, in order to inherit this convention and keep the method name unchanged, the first parameter name has been included in method name. Therefore, we don’t need to write the first parameter name twice.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// declaration&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;registerClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;cellClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AnyClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;forCellReuseIdentifier&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// calling&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;registerClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cellClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;forCellReuseIdentifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// since we already know that we are registering class, write Class twice is stupid as well as ugly&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;registerClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cellClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;forCellReuseIdentifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;why-every-external-parameter-name-is-required-in-initialization-method&quot;&gt;Why every external parameter name is required in initialization method?&lt;/h1&gt;
+
+&lt;p&gt;In Objective-c, we declare our initialization method as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instancetype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;initWithFahrenheit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fahrenheit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instancetype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;initWithKelvin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;kelvin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In Swift, as initialization method name is determined, if we don’t provide parameter name, which initialization method we are calling would be confusing.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fahrenheit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;kelvin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 05 Dec 2015 18:33:09 +0800</pubDate>
+        <link>http://burrowswang.github.io/swift/2015/12/05/understanding-strange-parameter-grammar-of-swift.html</link>
+        <guid isPermaLink="true">http://burrowswang.github.io/swift/2015/12/05/understanding-strange-parameter-grammar-of-swift.html</guid>
+        
+        
+        <category>Swift</category>
+        
+      </item>
+    
+      <item>
+        <title>Why the keyword override is requisite in Swift?</title>
+        <description>&lt;p&gt;Here is the description in &lt;a href=&quot;https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Inheritance.html#//apple_ref/doc/uid/TP40014097-CH17-ID196&quot;&gt;Apple’s document&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;To override a characteristic that would otherwise be inherited, you prefix your overriding definition with the override keyword. Doing so clarifies that you intend to provide an override and have not provided a matching definition by mistake. Overriding by accident can cause unexpected behavior, and any overrides without the override keyword are diagnosed as an error when your code is compiled.&lt;/p&gt;
+
+  &lt;p&gt;The override keyword also prompts the Swift compiler to check that your overriding class’s superclass (or one of its parents) has a declaration that matches the one you provided for the override. This check ensures that your overriding definition is correct.&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;As I see, two purpose:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Avoid providing a matching definition by mistake.&lt;/li&gt;
+  &lt;li&gt;Make sure the method name or property name or other declaration is exactly the same as super class’s.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Fri, 04 Dec 2015 21:52:04 +0800</pubDate>
+        <link>http://burrowswang.github.io/swift/2015/12/04/why-override-is-requisite-in-swift.html</link>
+        <guid isPermaLink="true">http://burrowswang.github.io/swift/2015/12/04/why-override-is-requisite-in-swift.html</guid>
+        
+        
+        <category>Swift</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 01 Dec 2015 22:52:04 +0800</pubDate>
+        <link>http://burrowswang.github.io/jekyll/update/2015/12/01/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://burrowswang.github.io/jekyll/update/2015/12/01/welcome-to-jekyll.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+  </channel>
+</rss>
